@@ -1,0 +1,46 @@
+{
+  "status": "published_with_neutral_labels",
+  "note": "Links fornecidos pela proprietária. Destinos bloqueados pela política de rede do ambiente; nomes, imagens e características ainda não verificados. Publicação autorizada com rótulos neutros; não associar aos produtos demonstrativos.",
+  "products": [
+    {
+      "id": 1,
+      "affiliate_url": "https://meli.la/1qscGvD",
+      "name": null,
+      "image_url": null,
+      "description": null,
+      "verified": false
+    },
+    {
+      "id": 2,
+      "affiliate_url": "https://meli.la/1o9XtwH",
+      "name": null,
+      "image_url": null,
+      "description": null,
+      "verified": false
+    },
+    {
+      "id": 3,
+      "affiliate_url": "https://meli.la/2qHhPnP",
+      "name": null,
+      "image_url": null,
+      "description": null,
+      "verified": false
+    },
+    {
+      "id": 4,
+      "affiliate_url": "https://meli.la/2tbAZ6u",
+      "name": null,
+      "image_url": null,
+      "description": null,
+      "verified": false
+    },
+    {
+      "id": 5,
+      "affiliate_url": "https://meli.la/2gsFtUd",
+      "name": null,
+      "image_url": null,
+      "description": null,
+      "verified": false
+    }
+  ]
+}

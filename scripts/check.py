@@ -37,3 +37,12 @@ assert len(posts)==7
 assert len({p['slug'] for p in posts})==7
 ElementTree.parse(ROOT/'sitemap.xml')
 print(f'OK: {len(pages)} páginas, H1 único, imagens com alt, JSON-LD presente, IDs e links locais válidos; 7 artigos no índice de busca; sitemap XML válido.')
+
+from content import POSTS
+manifest=json.loads((ROOT.parent/'data/affiliate-products.json').read_text())['products']
+achadinhos=(ROOT/'achadinhos/index.html').read_text()
+assert len(manifest)==5
+for item in manifest:
+ assert achadinhos.count('href="'+item['affiliate_url']+'"')==1
+assert achadinhos.count('rel="sponsored noopener noreferrer"')==5
+print('OK: cinco links afiliados preservados exatamente, identificados e sem associação aos produtos demonstrativos.')

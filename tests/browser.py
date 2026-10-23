@@ -9,7 +9,7 @@ with sync_playwright() as p:
  page.goto('http://localhost:3000/busca/?q=brincadeiras');page.wait_for_selector('#search-results article');assert page.locator('#search-results article').count()>0
  page.locator('#search-input').fill('zzzinexistente');page.locator('#search-form button').click();assert page.locator('#search-results article').count()==0
  page.goto('http://localhost:3000/');form=page.locator('[data-form="newsletter"]');form.locator('[name="name"]').fill('Teste');form.locator('[name="email"]').fill('teste@example.com');form.locator('[type="checkbox"]').check();form.locator('button').click();assert 'não foi realizada' in form.locator('[role="status"]').inner_text()
- page.goto('http://localhost:3000/achadinhos/');page.locator('[data-offer]').first.click();assert 'não há oferta' in page.locator('.product-status').first.inner_text()
+ page.goto('http://localhost:3000/achadinhos/');assert page.locator('a.offer').count()==5;assert 'sponsored' in page.locator('a.offer').first.get_attribute('rel')
  page.goto('http://localhost:3000/contato/');assert page.locator('[data-form="contact"]').get_attribute('method')=='post'
  page.set_viewport_size({'width':390,'height':844});page.goto('http://localhost:3000/');page.locator('.menu-toggle').click();assert page.locator('#navigation').is_visible();page.keyboard.press('Escape');assert not page.locator('#navigation').is_visible()
  for path in ['/','/blog/','/categorias/','/achadinhos/','/contato/','/blog/pequenas-mudancas-na-rotina-aos-3-anos/']:
