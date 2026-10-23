@@ -1,0 +1,1 @@
+{"name":"entre-nos","private":true,"scripts":{"build":"python3 scripts/build.py","start":"python3 -m http.server 3000 --directory dist","test":"python3 scripts/check.py"}}
