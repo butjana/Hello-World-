@@ -11,6 +11,7 @@ document.addEventListener('keydown', event => {
  }
 });
 document.querySelectorAll('[data-form]').forEach(form => form.addEventListener('submit', event => {
+ if(form.dataset.form === 'contact' && form.hasAttribute('action')) return;
  event.preventDefault();
  if(!form.reportValidity()) return;
  const status = form.querySelector('.form-status');

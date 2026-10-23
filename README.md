@@ -32,7 +32,8 @@ Cadastre o domínio no Search Console pelo DNS ou acrescente a meta tag de verif
 
 ## Integrações pendentes
 
-- **Newsletter e contato:** validam os campos no navegador, mas não enviam nem persistem dados. A confirmação informa explicitamente que a inscrição ou envio não aconteceu. Configure um provedor ou endpoint de servidor, proteção contra abuso, tratamento de erros e cancelamento antes de ativar. Nunca inclua chaves secretas no JavaScript.
+- **Contato:** POST nativo para FormSubmit, destino entrenos.contato13@gmail.com, sem chaves no navegador. A primeira submissão requer ativação pelo destinatário no e-mail enviado pelo provedor. Até confirmar essa etapa, entrega real não foi validada. CAPTCHA padrão mantido, honeypot e consentimento obrigatório. `python3 tests/contact.py` intercepta o POST sem enviar e-mail real.
+- **Newsletter:** ainda demonstrativa, sem envio ou persistência. Exige conta e formulário de um provedor de newsletter com confirmação, descadastro e política de tratamento. Não confundir formulário de contato com cadastro para marketing.
 - **Afiliados:** tipos de produtos com imagens ilustrativas, sem ofertas reais, preços ou avaliações inventadas. Selecione anúncios, verifique critérios e substitua os botões por links reais com `rel="sponsored noopener"`. Preserve o aviso de comissão.
 - **Autoria e redes:** substitua a apresentação demonstrativa por biografia aprovada e adicione perfis reais; não existem links sociais fictícios.
 - **Documentos legais:** minutas demonstrativas, que devem refletir a responsável, fornecedores e tratamento efetivo antes de coletar dados.
